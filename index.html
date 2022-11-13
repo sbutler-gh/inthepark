@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://the.missing.style/v1.0.1/missing.min.css"
+    />
+    <script src="https://meet.jit.si/external_api.js"></script>
+    <style>
+      html {
+        overflow: auto;
+      }
+
+      html,
+      body,
+      div,
+      iframe {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hello world</h1>
+      <p>Current lines of code: <strong>49</strong> (plus a big iframe dependency, probably :sad: )
+    </main>
+    <div id="meet"></div>
+
+    <script>
+      const domain = 'meet.jit.si'; // change domain to match your Jitsi server
+      const options = {
+        roomName: 'Hangout in the Park',
+        parentNode: document.querySelector('#meet'),
+      };
+      const api = new JitsiMeetExternalAPI(domain, options);
+    </script>
+  </body>
+</html>
